@@ -23,7 +23,7 @@ function CoinTable() {
     return (
         <div className="flex flex-col items-center justify-center gap-5 my-5 w-[80vw] mx-auto">
             <div className="flex items-center justify-center w-full px-2 py-4 font-semibold text-black bg-yellow-400">
-                {/* Hear of the Table */}
+                {/* Head of the Table */}
                 <div className="basis-[35%]">
                     Coin
                 </div>
