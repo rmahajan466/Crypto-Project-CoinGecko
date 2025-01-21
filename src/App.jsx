@@ -10,7 +10,6 @@ function App() {
 
   return (
     <>
-    {currency}
     <Navbar setCurrency={setCurrency}/>
     <Banner />
     <CoinTable currency = {currency} />

@@ -5,11 +5,11 @@ import { useQuery } from "react-query";
 function CoinTable({ currency }) {
 
     const [page, setPage] = useState(1);
-    const { data, isLoading, isError, error, isFetching } = useQuery(['coins',page], () => fetchCoinData(page, currency), {
+    const { data, isLoading, isError, error, isFetching } = useQuery(['coins',page, currency], () => fetchCoinData(page, currency), {
         // retry: 2,
         // retryDelay: 1000,
-        // cacheTime: 1000 * 60 * 2,
-        // staleTime: 1000 * 60 * 2,
+        cacheTime: 1000 * 60 * 2,
+        staleTime: 1000 * 60 * 2,
     });
 
     if(isError){
