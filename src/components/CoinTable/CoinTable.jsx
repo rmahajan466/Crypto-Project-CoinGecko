@@ -4,6 +4,7 @@ import { useQuery } from "react-query";
 // import { CurrencyContext } from "../../context/CurrencyContext";
 import currencyStore from "../../state/store";
 import { useNavigate } from "react-router-dom";
+import { Facebook } from "react-content-loader";
 
 function CoinTable() {
 
@@ -25,6 +26,10 @@ function CoinTable() {
 
     if(isError){
         return <div> Error: {error.message} </div> ;
+    }
+
+    if(isLoading){
+        return <Facebook /> ;
     }
 
     return (
