@@ -7,15 +7,16 @@ import { chartDays } from "../../helpers/constants";
 Chart.register(CategoryScale);
 function CoinInfo({ historicData, setDays, setCoinInterval, days, currency }) {
 
+
     function handleDaysChange(e){
         console.log(e.target.options[e.target.selectedIndex].value);
         const daysSelected = e.target.options[e.target.selectedIndex].value;
         if(daysSelected == 1){
-            setCoinInterval('');
+            setCoinInterval?.('');
         } else {
-            setCoinInterval('daily');
+            setCoinInterval?.('daily');
         }
-        setDays(e.target.options[e.target.selectedIndex].value);
+        setDays?.(e.target.options[e.target.selectedIndex].value);
     }
 
     if(!historicData){
