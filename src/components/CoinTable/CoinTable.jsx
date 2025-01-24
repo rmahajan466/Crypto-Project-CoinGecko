@@ -46,7 +46,7 @@ function CoinTable() {
                     24H Change
                 </div>
                 <div className="basis-[20%]">
-                    Marker Cap
+                    Market Cap
                 </div>
             </div>
 
@@ -81,6 +81,10 @@ function CoinTable() {
                         </div>
                     );
                 })}
+            </div>
+
+            <div className="text-xl font-semibold text-white p-2">
+            Page: {page}
             </div>
 
             <div className="flex items-center justify-center gap-4">
